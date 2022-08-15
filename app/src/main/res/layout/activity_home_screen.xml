@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.cardview.widget.CardView
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="25dp"
+            app:cardCornerRadius="50dp"
+            app:cardBackgroundColor="#F3E2E2"
+            android:layout_marginTop="15dp" >
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#F3E2E2"
+                android:src="@drawable/profile"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/lato_black_italic"
+            android:text="MY MEDI"
+            android:textColor="@color/main"
+            android:textSize="40sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignStart="@+id/textView"
+            android:layout_marginTop="1dp"
+            android:fontFamily="@font/lato_black_italic"
+            android:text="ONLINE PHARMACY"
+            android:textColor="@color/main"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/textView23"
+            android:layout_alignStart="@+id/textView23"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="-2dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="26dp"
+            app:cardBackgroundColor="#E6FCFF"
+            app:cardCornerRadius="15dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:onClick="onSearch"
+                app:cardBackgroundColor="@color/sub"
+                app:cardCornerRadius="15dp"
+                tools:ignore="OnClick">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ic_baseline_search_24" />
+            </androidx.cardview.widget.CardView>
+
+            <EditText
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/lato_black_italic"
+                android:hint="Search Doctor's and Medicines"
+                android:paddingLeft="10dp"
+                android:textColor="@color/main"
+                android:textSize="20dp" />
+        </androidx.cardview.widget.CardView>
+        <!--   ****************POPULAR MEDICINES ***********************-->
+        <!--   ****************MEDICINE SECTIONS ***********************-->
+        <TextView
+            android:id="@+id/medicines"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar"
+            android:layout_alignStart="@+id/search_bar"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_black_italic"
+            android:text="Medicines"
+            android:textColor="@color/main"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/See_all_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_bar"
+            android:layout_alignEnd="@+id/search_bar"
+            android:layout_marginTop="20dp"
+            android:text="See all"
+            android:onClick="medicine_list"
+            android:textColor="#2C68FF"
+            android:textSize="15dp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview_medicine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/medicines"
+            android:layout_alignStart="@+id/medicines"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:cardBackgroundColor="@color/sube"
+            app:cardCornerRadius="50dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medicines1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Medicine_1"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Medicines2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Medicine_2"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medicines3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi7"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Medicine_3"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medicines4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="140dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="245dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Madicine_4"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medicines5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="135dp"
+                android:layout_marginTop="140dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Medicinee_5"
+                android:textColor="@color/main"
+                android:textSize="10dp"
+                app:cardCornerRadius="50dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/medicines6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="10dp"
+                app:cardCornerRadius="50dp">
+
+                <ImageView
+                    android:id="@+id/imageMedi6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/antibiotico" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textMedi6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="285dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Medicine_6"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+        <!--******************* DOCTOR SECTON ************************* -->
+        <TextView
+            android:id="@+id/Doctors"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_medicine"
+            android:layout_alignStart="@+id/cardview_medicine"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/lato_black_italic"
+            android:text="Doctor's Fields"
+            android:textColor="@color/main"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/See_all_doctor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cardview_medicine"
+            android:layout_alignEnd="@+id/cardview_medicine"
+            android:layout_marginTop="20dp"
+            android:text="See all"
+            android:onClick="doctor_list"
+            android:textColor="#2C68FF"
+            android:textSize="15dp" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Doctors"
+            android:layout_alignStart="@+id/Doctors"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            app:cardCornerRadius="50dp"
+            app:cardBackgroundColor="@color/sube">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doctor_1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_1"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Doctor_2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="135dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="160dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_2"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doctor_3"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="250dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="280dp"
+                android:layout_marginTop="115dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_3"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doctor_4"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="23dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="140dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="245dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_4"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Doctor_5"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="135dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginTop="140dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor5"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="170dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_5"
+                android:textColor="@color/main"
+                android:textSize="10dp"
+                app:cardCornerRadius="50dp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/doctor_6"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="250dp"
+                android:layout_marginTop="140dp"
+                app:cardCornerRadius="50dp"
+                android:layout_marginEnd="10dp">
+
+                <ImageView
+                    android:id="@+id/imageDoctor6"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/doctor" />
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/textDoctor6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/doctor_1"
+                android:layout_alignStart="@+id/doctor_1"
+                android:layout_marginStart="285dp"
+                android:layout_marginTop="250dp"
+                android:fontFamily="@font/lato_black_italic"
+                android:text="Doctor_6"
+                android:textColor="@color/main"
+                android:textSize="10dp" />
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+</ScrollView>
